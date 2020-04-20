@@ -383,7 +383,9 @@ h1 {
 		height: 20px;
 		text-align: right;
 		font-family: "Roboto", sans-serif;
+		font-size: 12px;
         max-width: 480px;
+		color: black;
 }
 
 .login-page {
