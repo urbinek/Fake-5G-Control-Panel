@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>5G Transmitter / Admin / Panel</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/graph.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+	<script src="js/main.js"></script>
+	<style type="text/css">
+	.back-link a {
+		color: #4ca340;
+		text-decoration: none; 
+		border-bottom: 1px #4ca340 solid;
+	}
+	.back-link a:hover,
+	.back-link a:focus {
+		color: #408536; 
+		text-decoration: none;
+		border-bottom: 1px #408536 solid;
+	}
+	h1 {
+		height: 100%;
+		/* The html and body elements cannot have any padding or margin. */
+		margin: 0;
+		font-size: 14px;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 32px;
+		margin-bottom: 3px;
+	}
+	.entry-header {
+		text-align: left;
+		margin: 0 auto 50px auto;
+		width: 80%;
+        max-width: 978px;
+		position: relative;
+		z-index: 10001;
+	}
+	#main-content {
+		padding-top: 100px;
+	}
+	</style>
+</head>
+<body class="main">
+	<div id="main-content">
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div>
+		<div id="content">
+			<p>Visitor account. All settings are in view-only mode.
+			Log in to admin accout to change the settings.</p>
+			<h4>Transmitter power:</h4>
+			<div class="slidecontainer">
+				<input type="range" min="1" max="1000" value="200" class="slider" id="myRange" onchange="updateTextInput(this.value);" disabled>
+				<div>Current power: 200%</div>
+				<div class="tooltip">
+					DANGER! Exposure to 5G signal above 100% led to some cases of cancerous heart tumors and brain tumors.
+				</div>
+			</div><br />
+			<h4>Control settings:</h4>
+			<div>
+				<div class="left">
+				Mind control
+				</div>
+				<div class="right">
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" disabled>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="left">
+				Population control
+				</div>
+				<div class="right">
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked disabled>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="left">
+				Bird control
+				</div>
+				<div class="right">
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked disabled>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+			</div><br />
+			<h4>Additional settings:</h4>
+			<div>
+				<div class="left">
+				COVID-19
+				</div>
+				<div class="right">
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked disabled>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div>
+				
+				<div class="left">
+				Nanobots
+				</div>
+				<div class="right">
+					<div class="onoffswitch">
+						<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" disabled>
+						<label class="onoffswitch-label" for="myonoffswitch">
+							<span class="onoffswitch-inner"></span>
+							<span class="onoffswitch-switch"></span>
+						</label>
+					</div>
+				</div><br />
+				<p><h4>Graphs:</h4></p>
+				<div>COVID-19 / Control</div>
+				<div>
+					<canvas id="myChart" width="480" height="250"></canvas>
+				</div>
+			</div>
+		
+
+		</div>
+
+	</div>
+</body>
+</html>
